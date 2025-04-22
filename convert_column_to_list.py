@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 """
 author Arnab Dutta
-
-Updated Comments
 """
 
 from pyspark.sql import SparkSession
