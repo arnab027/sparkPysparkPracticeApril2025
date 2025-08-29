@@ -3,6 +3,8 @@ from delta import *
 
 builder = pyspark.sql.SparkSession.builder.appName("MyApp") \
     .config("spark.sql.extensions", "io.delta.sql.DeltaSparkSessionExtension") \
+    .master("local[*]") \
+    .config("spark.sql.shuffle.partitions", "4") \
     .config("spark.sql.catalog.spark_catalog", "org.apache.spark.sql.delta.catalog.DeltaCatalog")\
     .config('spark.sql.debug.maxToStringFields', 2000) \
     .config('spark.debug.maxToStringFields', 2000)
