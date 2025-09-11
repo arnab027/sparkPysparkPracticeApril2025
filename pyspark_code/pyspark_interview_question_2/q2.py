@@ -41,7 +41,7 @@ company_df.show()
 
 # company_df2 = company_df.select("Region", "Year", expr("stack(2, 'Sales', Sales, 'Profit', Profit) as (Metric, Value)"))
 
-company_df2 = company_df.selectExpr("Region", "Year", "stack(2, 'Sales', Sales, 'Profit', Profit) as (Metric, Value)")
+company_df2 = company_df.selectExpr("Region", "Year", "stack(2, 'Sales', Sales, 'Profit', Profit) as (Metric,Value)")
 
 company_df2.show()
 
